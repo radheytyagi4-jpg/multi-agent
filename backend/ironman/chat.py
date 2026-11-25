@@ -2,7 +2,7 @@
 from backend.llm import get_llm
 
 llm = get_llm(
-    model="YOUR_REASONING_MODEL_ID",
+    model="nvidia/nemotron-3-ultra-550b-a55b:free",
     temperature=0.2
 )
 
