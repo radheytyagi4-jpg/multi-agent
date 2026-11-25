@@ -2,7 +2,7 @@ from backend.llm import get_llm
 
 
 llm = get_llm(
-    model='',
+    model='cohere/north-mini-code:free',
     temperature=0.2
 )
 
