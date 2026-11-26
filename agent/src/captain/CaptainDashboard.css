@@ -18,3 +18,32 @@
 .activity-panel{padding:18px 21px;margin-bottom:15px}.activity-heading{margin-bottom:8px}.activity-list{border-top:1px solid #253149}.activity-row{display:grid;grid-template-columns:9px 42px 1fr;align-items:start;gap:12px;padding:12px 0;border-bottom:1px solid #202b40}.activity-row:last-child{border-bottom:0}.activity-marker{width:7px;height:7px;border-radius:50%;background:#7786a5;margin-top:5px}.activity-marker.success{background:#57d5a1;box-shadow:0 0 9px #57d5a144}.activity-row time{font:9px 'DM Mono',monospace;color:#64728d;padding-top:1px}.activity-row strong{font-size:10px;color:#dce3f2;font-weight:600}.activity-row p{font-size:10px;color:#75839e;margin-top:3px;overflow-wrap:anywhere}.captain-footer{display:flex;justify-content:space-between;color:#53617c;font:8px 'DM Mono',monospace;letter-spacing:1px;padding:10px 2px}.captain-footer b{color:#8e80ff;font-size:12px;margin-left:4px}
 @media(max-width:1050px){.captain-sidebar{width:205px}.captain-content{padding:30px 25px}.captain-topbar{padding:0 25px}.agent-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.captain-sidebar{width:58px;padding:18px 8px}.captain-brand{padding:0 2px 35px}.captain-brand>span:last-child,.sidebar-label,.nav-link:not(.active),.nav-link em,.nav-link.active{font-size:0}.nav-link{justify-content:center;padding:12px 4px}.nav-link>span{font-size:17px}.nav-link.active{font-size:0}.captain-profile{justify-content:center;padding:12px 0}.captain-profile>div:not(.captain-avatar),.online-dot,.sidebar-footnote{display:none}.captain-topbar{padding:0 15px}.captain-content{padding:25px 14px}.page-heading{align-items:flex-start;gap:12px}.page-heading h1{font-size:24px}.mission-chip{font-size:7px;padding:7px}.stat-grid{grid-template-columns:1fr}.stat-card{padding:13px}.agent-grid{grid-template-columns:1fr}.brief-panel{padding:17px 14px}.brief-actions{align-items:flex-start;gap:12px;flex-direction:column}.captain-footer{font-size:7px;gap:8px}.topbar-right{gap:8px}.connection-indicator{font-size:8px}}
+
+
+/* Agent workspaces and five-card team layout */
+.agent-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.agent-card.clickable{cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s}
+.agent-card.clickable:hover,.agent-card.clickable:focus-visible{transform:translateY(-3px);border-color:#7668e9;box-shadow:0 12px 35px #05081680;outline:none}
+.agent-symbol.orange{background:#ff9d421c;color:#ffb36b}.agent-symbol.blue{background:#4b9dff1c;color:#82bdff}
+.agent-card-footer .open-arrow{color:#a99cff;font-size:18px}
+.agent-detail-heading{display:flex;align-items:center;gap:17px;margin:25px 0 28px}
+.agent-detail-heading h1{font-size:28px;margin:4px 0;color:#f4f6fc}
+.agent-detail-heading p{font-size:12px;color:#8996ae}
+.agent-symbol.large{width:58px;height:58px;font-size:27px;flex-shrink:0}
+.agent-detail-heading .status-pill{margin-left:auto}
+.back-link{border:0;background:transparent;color:#a99cff;font:12px 'DM Sans',sans-serif;cursor:pointer;padding:0}
+.instruction-panel{margin-bottom:25px}
+.history-count{font:9px 'DM Mono',monospace;color:#8795b1;letter-spacing:1px}
+.task-list{display:grid;gap:12px}
+.task-card{background:#111a2b;border:1px solid #26334a;border-radius:12px;padding:17px 19px}
+.task-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#e8edf8}
+.task-instruction{font-size:13px;color:#c8d1e3;margin:13px 0 15px;white-space:pre-wrap;overflow-wrap:anywhere}
+.task-output{border-left:2px solid #7769f4;background:#0c1423;padding:10px 13px;border-radius:0 7px 7px 0}
+.task-output span{font:9px 'DM Mono',monospace;color:#9b90ff;letter-spacing:1px}
+.task-output p{font-size:11px;color:#8795ad;margin-top:5px}
+.task-card time{display:block;font:9px 'DM Mono',monospace;color:#64728d;margin-top:12px}
+.empty-state{min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px dashed #34415a;border-radius:12px;color:#aab5ca}
+.empty-state>span{font-size:24px;color:#9a8dff}.empty-state strong{font-size:13px}.empty-state p{font-size:11px;color:#7786a0}
+.runtime-note{font-size:10px;color:#7c8aa4;margin-top:18px;padding:12px 14px;background:#151d2d;border-radius:8px}
+@media(max-width:1050px){.agent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.agent-grid{grid-template-columns:1fr}.agent-detail-heading{align-items:flex-start;flex-wrap:wrap}.agent-detail-heading .status-pill{margin-left:0}}
