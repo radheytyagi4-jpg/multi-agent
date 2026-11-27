@@ -34,8 +34,8 @@ def wanda(task:str):
     return response.content
 
 if __name__ == "__main__":
-    result = wanda(
+    result_wanda = wanda(
         "Create a responsive dashboard for an expense tracker."
     )
 
-    print(result)
+    print(result_wanda)
