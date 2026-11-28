@@ -2,8 +2,9 @@ from backend.llm import get_llm
 
 
 llm = get_llm(
-    model='cohere/north-mini-code:free',
-    temperature=0.2
+    model="qwen/qwen3-coder",
+    temperature=0.2,
+    max_tokens = 4096
 )
 
 SYSTEM_PROMPT = """
@@ -37,28 +38,23 @@ You work with the Project Manager and Architect agents.
 
 
 
-def strange(task:str):
-    messages=[
+
+def strange(task: str):
+
+    messages = [
         ("system", SYSTEM_PROMPT),
-        ("user", task)
+        ("human", task)
     ]
 
     response = llm.invoke(messages)
+
+    print("\n===== STRANGE DEBUG =====")
+    print("Content:", repr(response.content))
+    print("Additional kwargs:", response.additional_kwargs)
+    print("Response metadata:", response.response_metadata)
+    print("Usage:", response.usage_metadata)
+
     return response.content
 
 
-if __name__ == "__main__":
-    task = """
-    Build a user authentication API using FastAPI.
 
-    Requirements:
-    - User registration
-    - Login
-    - JWT authentication
-    - Password hashing
-    - PostgreSQL database
-    - Input validation
-    """
-    result = strange(task)
-
-    print(result)

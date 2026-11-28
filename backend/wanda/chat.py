@@ -3,7 +3,8 @@ from backend.llm import get_llm
 
 llm = get_llm(
     model="xiaomi/mimo-v2.6-flash-mopd",
-    temperature=0.2
+    temperature=0.2,
+    max_tokens = 4096
 )
 
 SYSTEM_PROMPT = """
@@ -33,9 +34,4 @@ def wanda(task:str):
 
     return response.content
 
-if __name__ == "__main__":
-    result_wanda = wanda(
-        "Create a responsive dashboard for an expense tracker."
-    )
 
-    print(result_wanda)
